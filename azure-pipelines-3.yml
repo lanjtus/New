@@ -24,3 +24,8 @@ steps:
   inputs:
     Contents: '**/war'
     TargetFolder: '$(build.artifactstagingdirectory)'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '/home/vsts/work/1/s/webapp/target'
+    Contents: 'webapp.war'
+    TargetFolder: '$(build.artifactstagingdirectory)'
